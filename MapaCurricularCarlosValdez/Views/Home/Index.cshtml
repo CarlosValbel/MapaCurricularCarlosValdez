@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MapaCurricularCarlosValdez.Models.ViewModels.IndexViewModel>
+@{
+    Layout = "Layout";
+}
+
+<h1>Oferta Académica</h1>
+
+<ol class="rectangle-list">
+    @foreach (var c in Model)
+    {
+        <li><a href="~/@c.Nombre.Replace(" ","-")">@c.Plan @c.Nombre.ToUpper()</a></li>
+    }
+</ol>
+
